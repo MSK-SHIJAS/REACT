@@ -1,0 +1,64 @@
+APP.JS
+---------------
+
+import logo from './logo.svg';
+import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from './Layout';
+import Home from './Home';
+import About from './About';
+
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="about" element={<About />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+}
+
+export default App;
+
+
+ABOUT.JS
+-------------------
+
+import React from 'react'
+
+ function About() {
+  return (
+    <div>
+      HOME PAGE
+    </div>
+  )
+}
+export default About
+
+LAYOUT.JS
+---------------------
+
+import React from 'react'
+import {Link, Outlet } from 'react-router-dom'
+
+function Layout() {
+  return (
+    <div>
+      <nav>
+        <ul>
+          <Link to='/about'><li>About</li></Link> 
+          <Link to='/contact'><li>Contact</li></Link> 
+          <Link to='/service'><li>Services</li></Link> 
+        </ul>
+      </nav>
+      <Outlet/>
+    </div>
+  )
+}
+
+export default Layout
