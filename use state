@@ -1,0 +1,84 @@
+//BASICS
+
+import logo from './logo.svg';
+import './App.css';
+import { useState } from "react";
+
+
+function App() {
+
+  // configuration
+  // const [state,setState] = useState()
+  const [count,setCount] = useState(0)
+
+  // const [a,b] = useState('cart')
+
+  return (
+    <div>
+
+      {count}
+
+      {/* {a} */}
+
+    </div>
+  );
+}
+
+export default App;
+
+//WITHIN FUCTION,ARRAY,OBJECT, MAPING 
+
+import logo from './logo.svg';
+import './App.css';
+import { useState } from "react";
+
+function App(){
+
+// const [profileName,setProfileName] = useState('Example')
+//   const [profileAge,setProfileAge] = useState(30)
+
+  // const [profile,setProfile] = useState({
+  //   name:'eeample',
+  //   age:20
+  // })
+
+  const [fruits,setFruits]= useState(['mango','orange','sdsd','sds','hi']);
+  
+  
+    return(
+      <div>      
+{/* {profileName}
+{profileAge} */}
+
+{/* { profile.name}
+{profile.age} */}
+
+
+ {/* {fruits[0]}
+      {fruits[1]} */}
+
+{/* 
+      {profileName}
+      {profileAge} 
+
+      {profile.name}
+      {profile.age}  */}
+     
+
+   { fruits.map((item)=>{
+      return(
+        <div>
+          {item}
+        </div>
+      )
+    })
+  }
+
+  </div>
+);
+}
+
+
+export default App;
+
+
